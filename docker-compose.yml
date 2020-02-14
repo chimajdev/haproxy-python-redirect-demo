@@ -4,6 +4,7 @@ services:
       image: haproxy:2.1.3-alpine
       volumes:
         - ./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg
+        - ./queueapp.lua:/code/queueapp.lua
       ports:
         - "127.0.0.1:8000:80"
       depends_on:
