@@ -11,8 +11,8 @@ core.register_service("queueapp", "http", function(applet)
 
   url = url .. "fromLua=true&appTalk=redirectFromSleep"
 
-	applet:set_status(302)
-	applet:add_header("location", url)
-	applet:start_response()
-	applet:send([[]])
+  applet:set_status(302)
+  applet:add_header("location", url)
+  applet:start_response()
+  applet:send([[]])
 end)
